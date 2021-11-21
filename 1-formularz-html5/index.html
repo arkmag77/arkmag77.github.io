@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+  <form action="https://formspree.io/f/xleaqykw" method="POST">
+      <label for="imie">Imię:</label>
+      <input type="text" name="imie" id="imie" required> <br>
+
+      <label for="nazwisko">Nazwisko:</label>
+      <input type="text" name="nazwisko" id="nazwisko" required> <br>
+
+      <label for="email">Adres e-mail:</label>
+      <input type="email" name="email" id="email" required> <br>
+ 
+      <label for="phone">Telefon:</label>
+      <input type="tel" name="phone" id="phone"> <br>
+
+      <label for="city">Wybór miasta:</label>
+      <select name="city" id="city">
+        <option value="krakow" selected>Kraków</option> 
+        <option value="warszawa">Warszawa</option>
+        <option value="gdansk">Gdańsk</option>
+      </select> <br>
+
+      <label>Płeć:</label>
+      <input type="radio" name="gender" value="kobieta" checked>Kobieta<br>
+      <input type="radio" name="gender" value="mężczyzna">Mężczyzna<br>
+
+      <label for="agreement">Zgoda na dane osobowe:</label>
+      <input type="checkbox" name="agreement" id="agreement" required>Wyrażam zgodę na przechowywanie moich danych osobowych.<br>
+
+      <label for="message">Wiadomość:</label>
+      <textarea name="message" id="message"></textarea> <br>
+
+      <input type="submit" value="Wyślij formularz">
+  </form>
+</body>
+</html>
