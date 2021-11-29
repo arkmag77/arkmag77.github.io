@@ -1,0 +1,97 @@
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2em;
+            color: #eee;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Header styles */
+        .main-header{
+            height: 15vh;
+            background-color: red;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+        }
+
+        /* Section styles */
+        .container {
+            display: flex;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .flex-item-1{
+            background-color: green;
+            flex-basis: 25%;
+            margin: 0 auto;
+        }
+
+        .flex-item-2{
+            background-color: blue;
+            flex-basis: 50%;
+            margin: 0 auto;
+        }
+
+        .flex-item-3{
+            background-color: pink;
+            flex-basis: 25%;
+            margin: 0 auto;
+        }
+
+        /* footer styles */
+        footer {
+            height: 15vh;
+            background-color: purple;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        
+            /* media styles */
+        @media screen and (max-width: 992px) {
+            .container {
+                flex-wrap: wrap-reverse;
+            }
+            .flex-item-1 {
+                height: 40vh;
+                flex-basis: 100%;
+            }
+            .flex-item-2 {
+                
+                flex-basis: 75%;
+            }
+            .flex-item-3 {
+                flex-basis: 25%;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-wrap: wrap;
+            }
+            .flex-item-1 {
+                order: 1;
+                flex-basis: 100%;
+            }
+            .flex-item-2 {
+                order: 0;
+                height: 40vh;
+                flex-basis: 100%;
+            }
+            .flex-item-3 {
+                order: 2;
+                height: 40vh;
+                flex-basis: 100%;
+            }
+        }
