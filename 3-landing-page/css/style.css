@@ -1,0 +1,37 @@
+.services, .team, .call-to-action, .footer {
+    padding: 60px 0px; 
+}
+
+.showcase-img{
+    background-size: cover;
+    background-position: center
+}
+
+.showcase-text{
+    padding: 50px;
+}
+
+.team-item{
+    max-width: 150px;
+}
+
+.call-to-action {
+    background: url(../img/slider-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px){
+
+    .service-item, .team-item{
+        margin-bottom: 50px;
+    }
+
+     .service-item:last-child, .team-item-last{
+        margin: 0;
+    } 
+
+    .showcase-img{
+        height: 300px;
+    }
+}
