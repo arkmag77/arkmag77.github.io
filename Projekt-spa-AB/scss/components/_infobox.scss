@@ -1,0 +1,135 @@
+%common-infobox { 
+
+    text-align: center;
+    margin-top: 25px;
+    padding: 0 10px;
+    /* z-index: 0; */
+
+}
+
+.infobox {
+
+    @extend %common-infobox;
+
+    .infobox-inner {
+
+        border: 1px solid #e2e5ea;
+        padding: 25px;
+        border-radius: 2px;
+
+        &:hover {
+
+            box-shadow: 0 5px 20px #f0f0f0;
+
+        }
+
+        img {
+                
+            width: 100%;
+
+        }
+
+        p {
+
+            font-weight: 300;
+            margin-bottom: 20px;
+
+        }
+
+        .meta {
+
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 20px;
+
+            a {
+
+            text-decoration: none;
+            color: inherit;
+            padding: 0 5px;
+
+            }
+        }
+
+    }
+
+}
+
+.infobox-team {
+        
+    @extend %common-infobox;
+    position: relative;
+    margin-top: 80px;
+
+    /* padding-bottom: 25px; */
+
+    img {
+                
+        width: 100%;
+
+    }
+
+    .infobox-team-description {
+
+
+        background-color: #fff;
+        width: 75%;
+        position: absolute;
+        left: 50%;
+        bottom: -75px;
+        transform: translate(-50%, 0);
+        transition: all 1s;
+
+        .social-icons {
+
+            opacity: 0;
+            transition: all 1s;
+
+            a {
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 40px;
+                display: inline-block;
+                border: 1px solid $secondary-color;
+                border-radius: 50%;
+                font-size: 25px;
+                color: $secondary-color;
+
+                &:hover {
+                    box-shadow: 0 5px 20px #f0f0f0;
+                    border: 1px solid $primary-color;
+                    color: #fff;
+                    background-color: $primary-color;
+                } 
+
+                
+                
+            }
+            
+        }
+
+        &:hover {
+
+            box-shadow: 0 5px 20px #f0f0f0;
+            bottom: -60px;
+            padding-bottom: 30px;
+            
+        }
+
+        &:hover .social-icons{
+            
+            opacity: 1;
+
+        } 
+
+        
+        
+
+       
+
+
+    }
+
+}

@@ -1,0 +1,58 @@
+.appointment-flexbox {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    /* z-index: 999; */
+
+    .appointment-img { 
+
+        display: none;
+        height: 550px;
+        width: 100%;
+        margin: 0;
+
+        .contact-bg {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+    }
+
+    .appointment-form {
+
+        font-size: 22px;
+
+    }
+
+
+    @media all and (min-width: $m){
+
+        .appointment-img {
+            width: 33.33%;
+            display: block;
+        }
+
+        .appointment-form {
+
+            width: 66.66%;
+            font-size: inherit;
+
+                input, select {
+
+                width: 49%;
+                
+                } 
+
+
+        }
+        
+
+    }
+   
+}

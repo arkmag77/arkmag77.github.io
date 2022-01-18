@@ -1,0 +1,28 @@
+.row {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0;
+ 
+    .col {
+
+    width: 100%;
+
+    } 
+
+    @media all and (min-width: $m) {
+
+        .col-md-33p {
+
+            width: 33%;
+
+        }
+
+        .col-md-66p {
+
+            width: 66%;
+
+        }
+    }
+}

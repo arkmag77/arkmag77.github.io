@@ -1,0 +1,138 @@
+.main-navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999; 
+    padding: 12px 0;
+    background-color: white;
+
+    .main-navigation-container {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* position: relative; */
+        /* align-items: center; */
+        .logo {
+            height: 50px;
+            display: inline-block;
+    
+            img{
+                height: 100%;
+            }
+        }
+    
+        %mobile-controls {
+            line-height: 50px; 
+            font-size: 28px;
+            cursor: pointer;
+        }
+    
+        .mobile-hamburger{
+            @extend %mobile-controls;
+            color: $primary-color;
+        }
+    
+        .mobile-menu-close{
+            @extend %mobile-controls;
+            color: white;
+            // height: 50px; 
+            // text-align: right;
+        }
+    
+        .open-menu-holder {
+            position: fixed;
+            max-width: 480px;
+            width: 480px;
+            right: 0;
+            top: 0;
+            background-color: $primary-color;
+            text-align: right;
+            padding: 12px 23px;
+            display: none;
+    
+           /*  &.open {
+                display: block;
+            } */
+    
+            .menu {
+                list-style: none;
+    
+                .menu-item{
+                    font-size: 28px;
+                    text-transform: uppercase;
+                    padding: 20px 0;
+    
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+    
+                }
+            }
+    
+        } 
+       
+    }
+    
+    @media all and (min-width: $l) {
+
+        .main-navigation-container {
+    
+            .logo {
+                height: 80px;
+            }
+
+            justify-content: flex-start;
+
+            %mobile-controls {
+    
+                display:none; 
+        
+            }
+        
+            .open-menu-holder {
+        
+                display: block;
+                position: static; 
+                background-color: transparent;
+                width: auto;
+                max-width: 100%;
+                padding: 0;
+                align-self: flex-start;
+        
+                .menu {
+        
+                    background-color: #fff;
+        
+                    .menu-item {
+                        display: inline-block;
+                        font-size: initial;
+                        margin: 0 20px;
+                       
+        
+                        a {
+                            color: $secondary-color;
+                        }
+                    }
+                    
+                    
+                }
+            
+            
+            }
+    
+        
+    
+        }
+    
+    }
+        
+     
+     
+}
+
+
+
+
+   

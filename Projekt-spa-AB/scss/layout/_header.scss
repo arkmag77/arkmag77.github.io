@@ -1,0 +1,135 @@
+.main-header {
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    .main-header-initial-text {
+        color: $secondary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $secondary-font;
+        font-weight: 700;
+    }
+
+    h1{
+        color: #1e2528;
+        font-size: 50px;
+    }
+
+    .main-header-content{
+        color: $secondary-text-color;
+        font-family: $primary-font;
+    }
+
+    .main-header-buttons {
+        margin-top: 40px;
+        /* text-decoration: none; */
+
+        .reserve-button {
+            /* display: inline-block; */
+            padding: 14px 20px;
+            color: #fff;
+            background-color: $primary-color;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $button-color;
+            }
+            
+        }
+
+        .watch-out-button {
+            display: inline-block; 
+            color: $secondary-color;
+            margin-left: 20px;
+            text-decoration: none;
+            background-color: #fff;
+            transition: all .3s;
+
+            &:hover {
+                color: $primary-color;
+                i {
+                    border-color: $primary-color;
+                }
+            }  
+
+            i {
+                height: 40px;
+                width: 40px;
+                border: 1px solid $secondary-color;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                margin-right: 5px;
+                // transition: all 1s;
+
+               /*  &:hover {
+                    color: $primary-color;
+                    border-color: $primary-color;
+                }  */
+            }
+        }
+
+    }
+
+    .header-left{
+        position: absolute;
+        left: 0;
+        top: 40%;
+        max-width: 10%;
+        z-index: -1;
+    }
+
+    .header-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 10000;
+        max-width: 30%;
+        display: none
+    }
+
+    
+
+    @media all and (min-width: $l) {
+
+        .main-header-container{
+            
+        width: 50%;
+        
+        }
+
+        .header-right {
+    
+            display: block;
+        }
+        
+    }
+
+    @media all and (min-width: $xl) {
+
+        .header-right {
+            
+            max-width: 40%;
+        }
+    }
+
+    @media all and (max-width: $xs) {
+
+        .main-header-buttons {
+
+            .reserve-button, 
+            .watch-out-button {
+
+                margin: 0;
+
+            }
+            
+        }
+    } 
+
+
+}

@@ -1,0 +1,42 @@
+%btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 15px 35px;
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: $primary-color;
+
+    &:hover {
+        background-color: $button-color;
+    }
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: $button-color;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+
+.btn-form {
+    @extend %btn;
+    background-color: #fff;
+    color: $secondary-color;
+    font-weight: 700;
+    border: 0;
+    padding: 10px 10px;
+
+    &:hover {
+
+        background-color: $button-color;
+        color: #fff; 
+
+    }
+}
